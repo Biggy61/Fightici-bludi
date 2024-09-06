@@ -16,6 +16,7 @@ namespace Project1
 
             Warrior blud = new Warrior(200, 3, "Blud");
             Warrior pepa = new Warrior(200, 3, "Pepa");
+            blud.Attack(pepa);
             Console.WriteLine(blud);
             Console.WriteLine(pepa);
             Console.ReadLine();
