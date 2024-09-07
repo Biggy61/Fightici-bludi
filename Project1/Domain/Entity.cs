@@ -48,23 +48,6 @@ namespace Project1.Domain
 
             }
         }
-        /*
-        public void Equipment(Weapons weapon)
-        {
-            switch (weapon)
-            {
-                case Weapons.LewisGun: this.dmg += 5; 
-                    break;
-                case Weapons.AMRAAM: this.dmg += 10; 
-                    break;
-                case Weapons.F22: this.dmg += 15;
-                    break;
-            }
-        }
-        */
-
-
-
 
 
 
@@ -107,7 +90,19 @@ namespace Project1.Domain
             this.hp = hp;
             this.dmg = dmg;
             this.IsLiving = IsLiving;
-
+            Weapons weapons = weapon;
+            switch (weapon)
+            {
+                case Weapons.LewisGun:
+                    this.dmg += 5;
+                    break;
+                case Weapons.AMRAAM:
+                    this.dmg += 10;
+                    break;
+                case Weapons.F22:
+                    this.dmg += 15;
+                    break;
+            }
         }
 
 
@@ -116,7 +111,7 @@ namespace Project1.Domain
 
         public override string ToString()
         {
-            string obj = $"Name: {this.Name}, hp: {this.hp}, dmg:{this.dmg}, Alive: {this.IsLiving}";
+            string obj = $"Name: {this.Name}, hp: {this.hp}, dmg: {this.dmg}, Alive: {this.IsLiving}";
             return obj;
         }
     }
