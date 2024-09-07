@@ -13,14 +13,15 @@ namespace Project1
         static void Main(string[] args)
         {
 
-            Enemy blud = new Enemy("Blud", 200, 4, true,);
-            Enemy pepa = new Enemy("Pepa", 150, 3, true);
+            Enemy blud = new Enemy("Blud", 200, 4, true);
+            Enemy pepa = new Enemy("Pepa", 150, 3, true, Weapons.F22);
             Console.WriteLine(blud);
             Console.WriteLine(pepa);
             blud.Attack(pepa);
             pepa.Attack(blud);
-            blud.Heal(Large);
-
+            blud.Heal(Potions.Large);
+            pepa.Heal(Potions.Small);
+            
 
 
             Console.WriteLine(blud);

@@ -10,7 +10,7 @@ namespace Project1.Domain
     {
         Small = 1,
         Mid = 2,
-        Large = 3
+        Large = 3,
     }
     enum Weapons
     {
@@ -37,13 +37,13 @@ namespace Project1.Domain
             switch (potion)
             {
                 case Potions.Small: this.hp += 5;
-
+                    Console.WriteLine($"{this.Name} healed, remaining hp: {this.hp}");
                     break;
                 case Potions.Mid: this.hp += 10;
-
+                    Console.WriteLine($"{this.Name} healed, remaining hp: {this.hp}");
                     break;
                 case Potions.Large: this.hp += 15;
-
+                    Console.WriteLine($"{this.Name} healed, remaining hp: {this.hp}");
                     break;
 
             }
@@ -107,7 +107,7 @@ namespace Project1.Domain
             this.hp = hp;
             this.dmg = dmg;
             this.IsLiving = IsLiving;
-            Weapons weapons = weapon;
+
         }
 
 
