@@ -73,7 +73,7 @@ namespace Project1.Domain
 
 
 
-
+         
 
 
         public Enemy(string name, int hp, int dmg, bool IsLiving) 
