@@ -52,7 +52,6 @@ namespace Project1.Domain
         }
 
 
-
         public void Attack(Enemy player)
             {
             player.hp -= this.dmg;
