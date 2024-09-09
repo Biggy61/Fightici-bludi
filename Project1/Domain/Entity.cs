@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Project1.Domain
 {
-    public enum Potions
+    enum Potions
     {
         Small = 1,
         Mid = 2,
-        Large = 3,
+        Large = 3
     }
     enum Weapons
     {
@@ -34,6 +34,8 @@ namespace Project1.Domain
         
         public void Heal(Potions potion)
         {
+            if (!IsLiving) return;
+
             switch (potion)
             {
                 case Potions.Small: this.hp += 5;
@@ -71,11 +73,6 @@ namespace Project1.Domain
         }
 
 
-
-
-         
-
-
         public Enemy(string name, int hp, int dmg, bool IsLiving) 
         {
             this.Name = name;
@@ -111,8 +108,8 @@ namespace Project1.Domain
 
         public override string ToString()
         {
-            string obj = $"Name: {this.Name}, hp: {this.hp}, dmg: {this.dmg}, Alive: {this.IsLiving}";
-            return obj;
+            return $"Name: {this.Name}, hp: {this.hp}, dmg: {this.dmg}, Alive: {this.IsLiving}";
+            
         }
     }
 }

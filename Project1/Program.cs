@@ -14,9 +14,20 @@ namespace Project1
         {
 
             Enemy blud = new Enemy("Blud", 100, 4, true, Weapons.LewisGun);
-            Enemy pepa = new Enemy("Pepa", 60, 3, true, Weapons.F22);
+            Enemy pepa = new Enemy("Pepa", 80, 3, true, Weapons.F22);
             Console.WriteLine(blud);
             Console.WriteLine(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
+            blud.Attack(pepa);
             blud.Attack(pepa);
             pepa.Attack(blud);
             blud.Heal(Potions.Large);
