@@ -12,31 +12,40 @@ namespace Project1
     {
         static void Main(string[] args)
         {
-
-            Enemy blud = new Enemy("Blud", 100, 4, true, Weapons.LewisGun);
-            Enemy pepa = new Enemy("Pepa", 80, 3, true, Weapons.F22);
+            Random rng = new Random();
+            Console.WriteLine("Name of your blud"); 
+            String enemy1 = Console.ReadLine();
+            Console.WriteLine("Name of enemy blud");
+            String enemy2 = Console.ReadLine();
+            Enemy blud = new Enemy(enemy1, 40, 4, true, Weapons.F22);
+            Enemy pepa = new Enemy(enemy2, 80, 3, true, Weapons.AMRAAM);
             Console.WriteLine(blud);
             Console.WriteLine(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            blud.Attack(pepa);
-            pepa.Attack(blud);
-            blud.Heal(Potions.Large);
-            pepa.Heal(Potions.Small);
-            
+            Console.WriteLine("Press 1 for attack or 2 for heal1;");
 
+            while (blud.IsLiving & pepa.IsLiving)
+            {
+                int Fight = Convert.ToInt32(Console.ReadLine());
+                switch (Fight)
+                {
+                    case 1:
+                        blud.Attack(pepa);
+                        pepa.Attack(blud);
+                        Console.WriteLine(blud);
+                        Console.WriteLine(pepa);
+                        break;
+                    case 2:
+                        blud.Heal(Potions.Small);
+                        int rand = rng.Next(1, 101);
+                        if (rand <= 70)
+                        {
+                            pepa.Heal(Potions.Large);
+                        }
+                        break;
 
-            Console.WriteLine(blud);
-            Console.WriteLine(pepa);
+                }
+            }
+
             Console.ReadLine();
 
             
