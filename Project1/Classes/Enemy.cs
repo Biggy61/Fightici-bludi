@@ -1,30 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
-namespace Project1.Domain
+namespace Project1.Classes
 {
-    enum Potions
-    {
-        Small = 1,
-        Mid = 2,
-        Large = 3
-    }
-    enum Weapons
-    {
-        LewisGun = 1,
-        AMRAAM = 2,
-        F22 = 3
-    }
-
-
-
-    class Entity
-    {
-        public string Name;
-    }
     class Enemy : Entity
     {
         public int hp;
@@ -53,18 +30,18 @@ namespace Project1.Domain
 
 
         public void Attack(Enemy player)
-            {
+        {
             player.hp -= this.dmg;
             if (player.hp > 0)
             {
               
-                    Console.WriteLine($"{this.Name} attacks: {player.Name} and deals {this.dmg} dmg");
-                  player.IsLiving = true;
+                Console.WriteLine($"{this.Name} attacks: {player.Name} and deals {this.dmg} dmg");
+                player.IsLiving = true;
             }
             else
             {
-              player.hp = 0;
-              player.IsLiving = false;
+                player.hp = 0;
+                player.IsLiving = false;
             }
               
  
