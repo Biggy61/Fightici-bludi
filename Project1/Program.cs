@@ -13,15 +13,15 @@ namespace Project1
         static void Main(string[] args)
         {
             Random rng = new Random();
-            Console.WriteLine("Name of your blud"); 
+            Console.WriteLine("Name of your Character"); 
             String enemy1 = Console.ReadLine();
-            Console.WriteLine("Name of enemy blud");
+            Console.WriteLine("Name of enemy Character");
             String enemy2 = Console.ReadLine();
             Enemy blud = new Enemy(enemy1, 40, 4, true, Weapons.F22);
             Enemy pepa = new Enemy(enemy2, 80, 3, true, Weapons.AMRAAM);
             Console.WriteLine(blud);
             Console.WriteLine(pepa);
-            Console.WriteLine("Press 1 for attack or 2 for heal1;");
+            Console.WriteLine("Press 1 for attack or 2 for heal;");
 
             while (blud.IsLiving & pepa.IsLiving)
             {
