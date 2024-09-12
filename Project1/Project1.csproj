@@ -46,8 +46,8 @@
     <Compile Include="bordel\Class1.cs" />
     <Compile Include="bordel\Class2.cs" />
     <Compile Include="bordel\Class3.cs" />
-    <Compile Include="Domain\Enemy.cs" />
-    <Compile Include="Domain\Entity.cs" />
+    <Compile Include="Classes\Enemy.cs" />
+    <Compile Include="Classes\Entity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
