@@ -4,8 +4,8 @@ namespace Project1.Classes
 {
     class Enemy : Entity
     {
-        public int hp;
-        public int dmg;
+        private int hp;
+        private int dmg;
         public bool IsLiving;
 
         
@@ -51,8 +51,8 @@ namespace Project1.Classes
 
         public Enemy(string name, int hp, int dmg, bool IsLiving) 
         {
-            this.Name = name;
             this.hp = hp;
+            this.Name = name;
             this.dmg = dmg;
             this.IsLiving = IsLiving;
 
@@ -63,7 +63,6 @@ namespace Project1.Classes
             this.hp = hp;
             this.dmg = dmg;
             this.IsLiving = IsLiving;
-            Weapons weapons = weapon;
             switch (weapon)
             {
                 case Weapons.LewisGun:
