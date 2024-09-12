@@ -31,6 +31,8 @@ namespace Project1.Classes
 
         public void Attack(Enemy player)
         {
+            if (player.IsLiving && this.IsLiving)
+            {
             player.hp -= this.dmg;
             if (player.hp > 0)
             {
@@ -43,12 +45,15 @@ namespace Project1.Classes
                 player.hp = 0;
                 player.IsLiving = false;
             }
-              
- 
-             
+            
+            }
+
+
+
+
         }
 
-
+        
         public Enemy(string name, int hp, int dmg, bool IsLiving) 
         {
             this.hp = hp;
